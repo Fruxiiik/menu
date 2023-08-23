@@ -78,6 +78,13 @@ html {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    transition: padding-bottom 0.5s ease-in-out;
+}
+
+@media (min-height: 768px) {
+    .menu__header {
+        padding-bottom: 57px;
+    }
 }
 
 .circle__button {
@@ -135,6 +142,13 @@ html {
     gap: 24px;
     list-style-type: none;
     margin-bottom: auto;
+    transition: gap 0.5s ease-in-out;
+}
+
+@media (min-height: 768px) {
+    .menu__list {
+        gap: 32px;
+    }
 }
 
 .menu__link {
@@ -174,11 +188,18 @@ html {
     padding-bottom: 16px;
 }
 
-.menu__links {
+.menu__contact-links {
     display: flex;
     flex-direction: column;
     padding-bottom: 24px;
     gap: 12px;
+    transition: padding-bottom 0.3s ease-in-out;
+}
+
+@media (min-height: 768px) {
+    .menu__contact-links {
+        padding-bottom: 40px;
+    }
 }
 
 .menu__email {
