@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+    url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Bold.woff') format('woff'),
+    url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+    url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Medium.woff') format('woff'),
+    url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Medium'),
+    url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Regular.woff') format('woff'),
+    url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+html {
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: "TT Lakes", serif;
+}
+
+/*.wrapper {*/
+/*    position: fixed;*/
+/*    width: 320px;*/
+/*    max-width: 1440px;*/
+/*    background-color: #F8F8F8;*/
+/*}*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100%;
+    padding: 0 24px;
+    background-color: #FFFFFF;
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.20),
+                -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+    z-index: 15;
+}
+
+.wrapper {
+
+}
+
+.menu__header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.circle__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+}
+
+.button {
+    display: block;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button:focus, .button:hover {
+    transform: scale(1.1);
+}
+
+.close__button {
+    background-image: url("images/close.svg");
+}
+
+.search__button {
+    background-image: url("images/search.svg");
+}
+
+.call__button {
+    background-image: url("images/call.svg");
+}
+
+.chat__button {
+    background-image: url("images/chat.svg");
+}
+
+.profile__button {
+    background-image: url("images/profile.svg");
+}
+
+.logo__img {
+    vertical-align: middle;
+}
+
+.logo__link {
+    margin-right: auto;
+}
+
+.menu__nav {
+    padding-bottom: 24px;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style-type: none;
+    margin-bottom: auto;
+}
+
+.menu__link {
+    outline: none;
+    text-decoration: none;
+    color: #1B1C21;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu__link::before {
+    content: '';
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    background-color: #41F6D7;;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-28px, -40px);
+}
+
+.menu__link:focus::before {
+    transform: translate(-24px, -4px);
+}
+
+.menu__link:focus {
+    color: #7E7E82;
+}
+
+.menu__buttons {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    gap: 12px;
+}
+
+.menu__email {
+    color: #1B1C21;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    outline: none;
+    text-decoration: none;
+}
+
+.menu__phone {
+    color: #1B1C21;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.6px;
+    outline: none;
+    text-decoration: none;
+}
+
+.menu__language {
+    display: flex;
+    padding-bottom: 24px;
+    gap: 7px;
+}
+
+.radio__label {
+    color: #1B1C21;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.radio__lang {
+    display: none;
+}
+
+.radio__lang:checked + .radio__label {
+    color: #7E7E82;
+}
+
